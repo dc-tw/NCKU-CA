@@ -1,1 +1,1 @@
-.exe
+Ripes-continuous-win-x86_64.exe
