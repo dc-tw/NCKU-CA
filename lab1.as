@@ -9,7 +9,7 @@ main:
         mv       a1, a0
         li       a2, 0
         li       a3, 0
-        jal      ra, iter       # Jump-and-link to the 'fact' label
+        jal      ra, iter       
         ecall
 back:
         # Print the result to console
@@ -48,8 +48,6 @@ for:
 
 
 # expects:
-# a0: Value which factorial number was computed from
-# a1: Factorial result
 printResult:
         mv       t0, a0
         mv       t1, a4
@@ -64,6 +62,13 @@ printResult:
 
         la       a1, str2
         li       a0, 4
+        ecall
+
+        mv       a1, t1
+        li       a0, 1
+        #ecall
+
+        ret       li       a0, 4
         ecall
 
         mv       a1, t1
